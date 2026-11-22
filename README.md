@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Snap-In – Smart Attendance System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Snap-In is a face recognition-based smart attendance system designed to automate student identification and attendance management using computer vision. It provides a web-based interface for managing the attendance process efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Face recognition-based student identification.
+- Automated attendance recording.
+- Computer vision-based face detection and recognition.
+- Web-based user interface.
+- Frontend and backend communication through REST APIs.
+- Organized attendance management.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React.js
+- TypeScript
+- Tailwind CSS
+- Axios
+- React Router
+- Lucide React Icons
 
-## Expanding the ESLint configuration
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+- REST API Architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### AI & Face Recognition
+- Face Recognition Library
+- OpenCV
+- NumPy
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+Snap_In/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── ...
+├── public/
+├── package.json
+├── index.html
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation and Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Frontend
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+
+```bash
+git clone https://github.com/kiruthika569/Snap_In.git
 ```
+
+2. Navigate to the project folder:
+
+```bash
+cd Snap_In
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+### Backend
+
+1. Navigate to your backend folder.
+2. Install the required Python packages:
+
+```bash
+pip install fastapi uvicorn opencv-python numpy face-recognition
+```
+
+3. Start the FastAPI server using:
+
+```bash
+uvicorn main:app --reload
+```
+
+## Purpose
+
+The main objective of Snap-In is to reduce manual attendance work by using face recognition technology to identify students and automate attendance recording.
+
+## Author
+
+**Kiruthika Loganathan**
+
+GitHub: [kiruthika569](https://github.com/kiruthika569)
+
